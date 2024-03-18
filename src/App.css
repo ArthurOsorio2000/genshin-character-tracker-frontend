@@ -1,31 +1,102 @@
+@font-face {
+  font-family: 'genshin-font';
+  src: local('genshin-font'), url(./fonts/genshin-font.ttf) format('opentype');
+}
+
+@font-face {
+  font-family: 'subtitle-font';
+  src: local('subtitle-font'), url(./fonts/subtitle-font.ttf) format('opentype');
+}
+
+h1 {
+  font-weight: normal;
+  font-size: calc(10px + 5vmin);
+}
+
+table, td {
+  border: 1.5px solid;
+  border-color: #d8c188;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  table-layout: fixed;
+  font-family: genshin-font;
+  font-size: calc(10px + 1.5vmin);
+  color: #81603f;
+  background-color: #f0eae3;
+}
+
+td {
+  padding: 1%;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 38.5vmin;
+  width: 100vmin;
   pointer-events: none;
+  padding-top: 20px;
+}
+.Spinner{
+  height: 15vmin;
+  width: 15vmin;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .Spinner {
+    animation: App-logo-spin infinite 10s linear;
   }
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #f0eae3;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(10px + 5vmin);
+  color: #171717;
+  font-family: genshin-font;
+  font-weight: normal;
 }
 
-.App-link {
-  color: #61dafb;
+.App-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #475366;
+  background-color: #f0eae3;
+}
+
+.farmable-characters-subtitle{
+  color: #9e8856;
+  font-size: 16px;
+
+}
+
+.character-list-button {
+  border-radius: 7px;
+  border-color: #b79f67;
+  font-family: genshin-font;
+  background-color: #f0eae3;
+  transition-duration: 0.4s; /*Animation transition speed*/
+  color: #9e8856;
+  padding: 15px 10px;
+  padding-bottom: 15px;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: none;
+}
+
+.character-list-button:hover {
+  background-color: #b79f67; /* Green */
+  color: white;
 }
 
 @keyframes App-logo-spin {
